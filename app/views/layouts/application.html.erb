@@ -16,22 +16,20 @@
 
   <body>
 <ul>
-<li>
-<a href="/movies">Movies</a>
-</li>
 
-<li>
-<a href="/actors">Actors</a>
-</li>
 
+<% if session.fetch(:user_id)==nil%>
 <li>
-<a href="/characters">Characters</a>
+<a href="/user_sign_in">Sign in</a>
 </li>
-
 <li>
-<a href="/directors">Directors</a>
+<a href="/user_sign_up">Sign up</a>
 </li>
-
+<%else%>
+<li>
+<a href="/user_sign_out">Sign out</a>
+</li>
+<%end%>
 </ul>
 
     <%= yield %>
