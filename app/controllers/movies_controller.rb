@@ -6,7 +6,6 @@ end
 
 
 
-
   def index
     matching_movies = Movie.all
 
